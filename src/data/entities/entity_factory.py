@@ -25,6 +25,10 @@ class EntityFactory:
                 "lifecycle": lifecycle["definition"],
                 "stage_id": lifecycle["starting_stage"],
                 "time_in_stage": 0,
+                "modifiers": self.lifecycles.get(lifecycle["definition"], {})
+                .get("stages", {})
+                .get(lifecycle["starting_stage"], {})
+                .get("modifiers", {}),
             }
 
             definition_components = dict(definition.get("components", {}))

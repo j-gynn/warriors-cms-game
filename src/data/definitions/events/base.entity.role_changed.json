@@ -1,0 +1,7 @@
+{
+    "type": "entity_event",
+    "data": {
+        "previous_role": "str",
+        "new_role": "str"
+    }
+}

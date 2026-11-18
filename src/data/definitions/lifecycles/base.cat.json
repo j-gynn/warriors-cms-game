@@ -9,7 +9,7 @@
                     "max_health": 0.1
                 },
                 "hunger": {
-                    "ration": 0.1
+                    "hunger_rate": 0.1
                 }
             }
         },
@@ -21,7 +21,7 @@
                     "max_health": 0.2
                 },
                 "hunger": {
-                    "per_moon": 0.5
+                    "hunger_rate": 0.5
                 }
             }
         },
@@ -33,7 +33,7 @@
                     "max_health": 0.8
                 },
                 "hunger": {
-                    "per_moon": 0.8
+                    "hunger_rate": 0.8
                 }
             }
         },
@@ -45,7 +45,7 @@
                     "max_health": 1.0
                 },
                 "hunger": {
-                    "per_moon": 1.0
+                    "hunger_rate": 1.0
                 }
             }
         },
@@ -57,7 +57,7 @@
                     "max_health": 1.1
                 },
                 "hunger": {
-                    "per_moon": 1.0
+                    "hunger_rate": 1.0
                 }
             }
         },
@@ -69,7 +69,7 @@
                     "max_health": 0.9
                 },
                 "hunger": {
-                    "per_moon": 1.0
+                    "hunger_rate": 1.0
                 }
             }
         },
@@ -81,7 +81,7 @@
                     "max_health": 0.75
                 },
                 "hunger": {
-                    "per_moon": 1.0
+                    "hunger_rate": 1.0
                 }
             }
         }

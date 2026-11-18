@@ -12,7 +12,6 @@ class HungerSystem:
             if hunger is None:
                 continue
 
-            # todo implement stockpiles
             hunger.hunger += hunger.hunger_rate
 
             if hunger.hunger >= 80:
@@ -31,3 +30,22 @@ class HungerSystem:
                         data={"health_reduce": 10},
                     )
                 )
+
+    def get_modifiers(self, entity):
+        """
+        Returns the active modifier for the entity's hunger component
+        """
+        if not entity.has_component("hunger"):
+            return 0
+
+        modifier = 1.0
+
+        for component in entity.components.values():
+            modifier *= component.modifiers.get("hunger", {}).get("hunger_rate", 1.0)
+
+        return modifier
+
+    def get_requirement(self, entity):
+        if not entity.has_component("hunger"):
+            return 0
+        return entity.get_component("hunger").hunger_rate * self.get_modifiers(entity)

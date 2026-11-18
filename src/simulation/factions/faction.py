@@ -13,3 +13,7 @@ class Faction:
         self.events: "EventManager" = event_manager
         self.resources = ResourceManager(self)
         self.population = PopulationManager(self)
+
+    def distribute_food(self):
+        # calculate food requirement
+        pass

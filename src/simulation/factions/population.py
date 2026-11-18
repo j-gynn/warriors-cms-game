@@ -1,15 +1,14 @@
+from simulation.event_manager import EntityEvent
+
+
 class PopulationManager:
     def __init__(self, faction):
         self.faction = faction
         self._population = {}
+        self._food_demand = 0
 
-    def consume_food(self, required):
-        supplied = self.faction.resources.remove("base.food", required)
+    def get_food_demand(self):
+        pass
 
-        shortage = required - supplied
-
-        if shortage > 0:
-            self.handle_food_shortage()
-
-    def handle_food_shortage(self):
-        print("yo pawns gonna be dead ayo")
+    def on_role_change(self, event: EntityEvent):
+        previous, current = event.data["previous_role"], event.data["new_role"]

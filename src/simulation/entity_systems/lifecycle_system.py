@@ -15,11 +15,11 @@ class LifeCycleSystem:
             if lifecycle is None:
                 continue
 
-            current_stage_data = (
-                self.lifecycle_definitions.get(lifecycle.lifecycle, {})
-                .get("stages", {})
-                .get(lifecycle.stage_id)
-            )
+            lifecycle_stages = self.lifecycle_definitions.get(
+                lifecycle.lifecycle, {}
+            ).get("stages", {})
+
+            current_stage_data = lifecycle_stages.get(lifecycle.stage_id)
 
             if not current_stage_data:
                 raise ValueError(
@@ -39,7 +39,10 @@ class LifeCycleSystem:
             if min_age <= lifecycle.time_in_stage <= max_age:
                 # todo: add variability in when they age up?
                 self.events.publish(
-                    EntityEvent("next_lifecycle_stage", entity_id=entity.id)
+                    EntityEvent("next_lifecycle_stage", entity_id=entity.id, data={})
                 )
                 lifecycle.stage_id = current_stage_data["next_stage"]
+                lifecycle.modifiers = lifecycle_stages[lifecycle.stage_id].get(
+                    "modifiers", {}
+                )
                 lifecycle.time_in_stage = 0
