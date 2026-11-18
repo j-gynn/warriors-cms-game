@@ -10,7 +10,7 @@ Matching can fail if nothing is suitable.
 from collections.abc import Callable, Sequence
 import numpy as np
 
-from simulation.event_manager import GameEvent
+from simulation.event_manager import EntityEvent
 
 
 class SocialScheduler:
@@ -118,7 +118,7 @@ class SocialScheduler:
 
             # Emit the interaction event
             event_queue.append(
-                GameEvent(
+                EntityEvent(
                     type="social_interaction",
                     entity_id=int(initiator_id),
                     data={"target_id": partner_id},

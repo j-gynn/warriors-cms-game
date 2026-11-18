@@ -1,4 +1,4 @@
-from simulation.event_manager import GameEvent
+from simulation.event_manager import EntityEvent
 
 
 class HungerSystem:
@@ -17,16 +17,16 @@ class HungerSystem:
 
             if hunger.hunger >= 80:
                 self.events.publish(
-                    GameEvent(
-                        "health.starvation",
+                    EntityEvent(
+                        "base.entity.health.starvation",
                         entity_id=entity.id,
                         data={"health_reduce": 20},
                     )
                 )
             elif hunger.hunger >= 50:
                 self.events.publish(
-                    GameEvent(
-                        "health.starvation",
+                    EntityEvent(
+                        "base.entity.health.starvation",
                         entity_id=entity.id,
                         data={"health_reduce": 10},
                     )

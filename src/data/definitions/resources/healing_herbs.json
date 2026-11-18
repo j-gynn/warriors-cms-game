@@ -1,0 +1,8 @@
+{
+    "id": "base.healthpack",
+    "name": "healing herbs",
+    "crafting_recipe": {
+        "base.leaves": 2,
+        "base.roots": 1
+    }
+}

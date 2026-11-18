@@ -1,5 +1,5 @@
 from data.definitions.definition_loader import load_definitions
-from simulation.event_manager import GameEvent
+from simulation.event_manager import EntityEvent
 
 
 class LifeCycleSystem:
@@ -39,7 +39,7 @@ class LifeCycleSystem:
             if min_age <= lifecycle.time_in_stage <= max_age:
                 # todo: add variability in when they age up?
                 self.events.publish(
-                    GameEvent("next_lifecycle_stage", entity_id=entity.id)
+                    EntityEvent("next_lifecycle_stage", entity_id=entity.id)
                 )
                 lifecycle.stage_id = current_stage_data["next_stage"]
                 lifecycle.time_in_stage = 0

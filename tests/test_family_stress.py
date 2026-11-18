@@ -34,7 +34,7 @@ from collections import deque
 import numpy as np
 
 from data.social.family_graph import FamilyGraph
-from simulation.systems.ancestry_system import AncestrySystem
+from simulation.entity_systems.ancestry_system import AncestrySystem
 
 family_g = FamilyGraph()
 ancestry_system = AncestrySystem(None, family_g)

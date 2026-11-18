@@ -9,12 +9,12 @@ from data.social.relationship_graph import RelationshipGraph
 from simulation.event_manager import EventManager
 from simulation.moonskip.default_turn_phases import register_default_phases
 from simulation.moonskip.turn_manager import TurnManager
-from simulation.systems.ancestry_system import AncestrySystem
-from simulation.systems.health_system import HealthSystem
-from simulation.systems.hunger_system import HungerSystem
-from simulation.systems.lifecycle_system import LifeCycleSystem
-from simulation.systems.pregnancy_system import PregnancySystem
-from simulation.systems.time_system import TimeSystem
+from simulation.entity_systems.ancestry_system import AncestrySystem
+from simulation.entity_systems.health_system import HealthSystem
+from simulation.entity_systems.hunger_system import HungerSystem
+from simulation.entity_systems.lifecycle_system import LifeCycleSystem
+from simulation.entity_systems.pregnancy_system import PregnancySystem
+from simulation.entity_systems.time_system import TimeSystem
 
 
 class Simulation:

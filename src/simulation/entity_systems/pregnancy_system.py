@@ -10,13 +10,12 @@ class PregnancySystem:
     def __init__(self, event_manager):
         self.events = event_manager
 
-        self.events.subscribe("pregnancy.birth", self.on_birth)
+        self.events.subscribe("base.entity.pregnancy.birth", self.on_birth)
 
     def get_pregnant(self, simulation, mother_id, father_id, definition_id):
         self.events.schedule_event(
             GameEvent(
-                "pregnancy.birth",
-                None,
+                "base.entity.pregnancy.birth",
                 {
                     "mother_id": mother_id,
                     "father_id": father_id,
@@ -46,8 +45,7 @@ class PregnancySystem:
 
         self.events.publish(
             GameEvent(
-                "entity.born",
-                entity_id=None,
+                "base.entity.born",
                 data={
                     "mother_id": event.data["mother_id"],
                     "father_id": event.data["father_id"],

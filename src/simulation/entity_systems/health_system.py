@@ -1,4 +1,4 @@
-from simulation.event_manager import GameEvent
+from simulation.event_manager import EntityEvent
 
 
 class HealthSystem:
@@ -21,7 +21,11 @@ class HealthSystem:
         health.health -= event.data["health_reduce"]
         if self.will_die_this_turn(health):
             self.events.publish(
-                GameEvent("death", entity_id=entity.id, data={"cause": "starvation"})
+                EntityEvent(
+                    "base.entity.death",
+                    entity_id=entity.id,
+                    data={"cause": "starvation"},
+                )
             )
 
     def on_death_event(self, event, simulation):

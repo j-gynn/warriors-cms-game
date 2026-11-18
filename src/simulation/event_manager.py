@@ -7,8 +7,17 @@ from uuid import UUID
 @dataclass
 class GameEvent:
     type: str
-    entity_id: int | None = None
-    data: dict[str, Any] = field(default_factory=dict)
+    data: dict
+
+
+@dataclass
+class EntityEvent(GameEvent):
+    entity_id: int
+
+
+@dataclass
+class FactionEvent(GameEvent):
+    faction_id: int
 
 
 class EventManager:

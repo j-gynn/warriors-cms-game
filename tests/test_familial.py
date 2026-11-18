@@ -1,5 +1,5 @@
 from data.social.family_graph import FamilyGraph
-from simulation.systems.ancestry_system import AncestrySystem
+from simulation.entity_systems.ancestry_system import AncestrySystem
 
 family = FamilyGraph()
 ancestrysystem = AncestrySystem(None, family)
