@@ -1,0 +1,16 @@
+{
+    "id": "base.cat",
+    "name": "Cat",
+    "lifecycle": {
+        "definition": "base.cat",
+        "starting_stage": "baby"
+    },
+    "components": {
+        "health": {
+            "max_health": 100
+        },
+        "hunger": {
+            "hunger_rate": 10
+        }
+    }
+}

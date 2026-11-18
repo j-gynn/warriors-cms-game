@@ -1,0 +1,33 @@
+{
+    "id": "warrior",
+    "name": "Warrior",
+    "description": "Given their full name in a ceremony, this cat is now ready to serve the Clan.",
+    "requirements": {
+        "components": ["work", "fight"],
+        "minimum_life_stage": "teenager"
+    },
+    "subclasses": {
+        "hunter": {
+            "modifiers": {
+                "hunting": 1.5,
+                "fighting": 0.75
+            }
+        },
+        "fighter": {
+            "modifiers": {
+                "hunting": 0.75,
+                "fighting": 1.5
+            }
+        },
+        "mediator": {
+            "modifiers": {
+                "hunting": 0.75,
+                "fighting": 1.5
+            }
+        }
+    },
+    "modifiers": {
+        "work_efficiency": 1.0,
+        "fight_efficiency": 1.0
+    }
+}

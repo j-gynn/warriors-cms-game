@@ -1,0 +1,22 @@
+{
+    "spring": {
+        "duration": 3,
+        "modifiers": {
+        }
+    },
+    "summer": {
+        "duration": 3,
+        "modifiers": {
+        }
+    },
+    "autumn": {
+        "duration": 3,
+        "modifiers": {
+        }
+    },
+    "winter": {
+        "duration": 3,
+        "modifiers": {
+        }
+    }
+}

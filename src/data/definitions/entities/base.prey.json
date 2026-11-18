@@ -1,0 +1,10 @@
+{
+    "id": "base.prey",
+    "name": "prey",
+    "lifecycle": {
+        "definition": "base.cat",
+        "starting_stage": "baby"
+    },
+    "components": {
+    }
+}

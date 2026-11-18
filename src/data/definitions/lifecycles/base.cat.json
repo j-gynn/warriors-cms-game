@@ -1,0 +1,89 @@
+{
+    "id": "base.cat",
+    "stages": {
+        "baby": {
+            "duration": [1,1],
+            "next_stage": "child",
+            "modifiers": {
+                "health": {
+                    "max_health": 0.1
+                },
+                "hunger": {
+                    "ration": 0.1
+                }
+            }
+        },
+        "child": {
+            "duration": [5,5],
+            "next_stage": "teenager",
+            "modifiers": {
+                "health": {
+                    "max_health": 0.2
+                },
+                "hunger": {
+                    "per_moon": 0.5
+                }
+            }
+        },
+        "teenager": {
+            "duration": [6,6],
+            "next_stage": "young_adult",
+            "modifiers": {
+                "health": {
+                    "max_health": 0.8
+                },
+                "hunger": {
+                    "per_moon": 0.8
+                }
+            }
+        },
+        "young_adult": {
+            "duration": [36, 36],
+            "next_stage": "adult",
+            "modifiers": {
+                "health": {
+                    "max_health": 1.0
+                },
+                "hunger": {
+                    "per_moon": 1.0
+                }
+            }
+        },
+        "adult": {
+            "duration": [48, 48],
+            "next_stage": "senior_adult",
+            "modifiers": {
+                "health": {
+                    "max_health": 1.1
+                },
+                "hunger": {
+                    "per_moon": 1.0
+                }
+            }
+        },
+        "senior_adult": {
+            "duration": [24, 24],
+            "next_stage": "senior",
+            "modifiers": {
+                "health": {
+                    "max_health": 0.9
+                },
+                "hunger": {
+                    "per_moon": 1.0
+                }
+            }
+        },
+        "senior": {
+            "duration": [0, 180],
+            "next_stage": null,
+            "modifiers": {
+                "health": {
+                    "max_health": 0.75
+                },
+                "hunger": {
+                    "per_moon": 1.0
+                }
+            }
+        }
+    }
+}

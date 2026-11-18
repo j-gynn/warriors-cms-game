@@ -1,0 +1,12 @@
+{
+    "id": "base.newborn",
+    "name": "Newborn",
+    "description": "Potat.",
+    "requirements": {
+        "components": [],
+        "max_life_stage": "newborn"
+    },
+    "modifiers": {
+        "work_efficiency": 0
+    }
+}
